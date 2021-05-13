@@ -14,9 +14,9 @@ class algorithm(nn.Module):
 
 
     def forward(self, x, eps):  
-        torch.save(x.cpu(), './non-noise.pt')
+        torch.save(x.cpu(), './non-noise.pt')       #original image
         x=RRN(x,eps)
-        torch.save(x.cpu(), './noise.pt')
+        torch.save(x.cpu(), './noise.pt')           #noised image
         return x
 
 
